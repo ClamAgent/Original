@@ -1,0 +1,6 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\bin\Release\AdoStreamWrapper.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\bin\Release\AdoStreamWrapper.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\bin\Release\ADODB.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\obj\Release\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\obj\Release\AdoStreamWrapper.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\AdoStreamWrapper\obj\Release\AdoStreamWrapper.pdb

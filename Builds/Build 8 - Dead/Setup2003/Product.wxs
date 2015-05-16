@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util='http://schemas.microsoft.com/wix/UtilExtension'>
+  <Product Id="2a7f98cf-e269-4a51-ab6b-6374b115e631" Name="ClamSink" Language="1033" Version="1.0.8.1" Manufacturer="SUF" UpgradeCode="d437a4cf-2ee3-47d9-abf1-82041a570b87">
+    <Package InstallerVersion="200" Compressed="yes" Platform="x86" />
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+    <!-- User running the SMTP Service -->
+    <Property Id="TRANSPORTUSER">
+      <RegistrySearch Id='TransportServiceUserName' Type='raw'
+          Root='HKLM' Key='SYSTEM\CurrentControlSet\Services\SMTPSVC' Name='ObjectName' />
+    </Property>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLDIR" Name="ClamSink">
+          <Component Id='SMTPSink' Guid='C2323A1D-4CB4-46fc-89C3-E95A4F04B8F9'>
+            <File Id='ClamSink.dll' Name='ClamSink.dll' DiskId='1' Source='..\ClamSink\bin\Release\ClamSink.dll' KeyPath='yes' />
+            <File Id='Message_Base.dll' Name='Message Base.dll' DiskId='1' Source='..\ClamSink\bin\Release\Message Base.dll' KeyPath='no' />
+            <File Id='ADODB.dll' Name='ADODB.dll' DiskId='1' Source='..\ClamSink\bin\Release\ADODB.dll' KeyPath='no' />
+            <File Id='AdoStreamWrapper.dll' Name='AdoStreamWrapper.dll' DiskId='1' Source='..\ClamSink\bin\Release\AdoStreamWrapper.dll' KeyPath='no' />
+            <File Id='CDO.dll' Name='CDO.dll' DiskId='1' Source='..\ClamSink\bin\Release\CDO.dll' KeyPath='no' />
+            <File Id='Microsoft.Exchange.Transport.EventInterop.dll' Name='Microsoft.Exchange.Transport.EventInterop.dll' DiskId='1' Source='..\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventInterop.dll' KeyPath='no' />
+            <File Id='Microsoft.Exchange.Transport.EventWrappers.dll' Name='Microsoft.Exchange.Transport.EventWrappers.dll' DiskId='1' Source='..\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.dll' KeyPath='no' />
+            <File Id='smtpreg.vbs' Name='smtpreg.vbs' DiskId='1' Source='..\Inst\Source\scripts\smtpreg.vbs' KeyPath='no' />
+            <File Id='ClamSink.dll.config' Name='ClamSink.dll.config' DiskId='1' Source='..\ClamSink\bin\Release\ClamSink.dll.config' KeyPath='no' />
+            <util:XmlFile Id='SettingsQuarantine' File='[INSTALLDIR]ClamSink.dll.config' Action='setValue' Name='value' Value='[QDIR]' ElementPath='//configuration/appSettings/add[\[]@key="QuarantineFolder"[\]]' Sequence='1' />
+            <util:XmlFile Id='SettingsLog' File='[INSTALLDIR]ClamSink.dll.config' Action='setValue' Name='value' Value='[LOGDIR]' ElementPath='//configuration/appSettings/add[\[]@key="LogPath"[\]]' Sequence='2' />
+            <util:XmlFile Id='SettingsDebug' File='[INSTALLDIR]ClamSink.dll.config' Action='setValue' Name='value' Value='[DEBUGDIR]' ElementPath='//configuration/appSettings/add[\[]@key="DebugPath"[\]]' Sequence='3' />
+          </Component>
+          <Component Id='ClamDaemon' Guid='48480127-5686-4363-BAB1-241720EE9EBC'>
+            <File Id='clamd.exe' Name='clamd.exe' DiskId='1' Source='..\Inst\Source\clamd\x86\clamd.exe' KeyPath='yes' />
+            <File Id='clamdscan.exe' Name='clamdscan.exe' DiskId='1' Source='..\Inst\Source\clamd\x86\clamdscan.exe' KeyPath='no' />
+            <File Id='freshclam.exe' Name='freshclam.exe' DiskId='1' Source='..\Inst\Source\clamd\x86\freshclam.exe' KeyPath='no' />
+            <File Id='libclamav.dll' Name='libclamav.dll' DiskId='1' Source='..\Inst\Source\clamd\x86\libclamav.dll' KeyPath='no' />
+            <File Id='libclamav_llvm.dll' Name='libclamav_llvm.dll' DiskId='1' Source='..\Inst\Source\clamd\x86\libclamav_llvm.dll' KeyPath='no' />
+            <File Id='libclamunrar.dll' Name='libclamunrar.dll' DiskId='1' Source='..\Inst\Source\clamd\x86\libclamunrar.dll' KeyPath='no' />
+            <File Id='libclamunrar_iface.dll' Name='libclamunrar_iface.dll' DiskId='1' Source='..\Inst\Source\clamd\x86\libclamunrar_iface.dll' KeyPath='no' />
+            <File Id='sigtool.exe' Name='sigtool.exe' DiskId='1' Source='..\Inst\Source\clamd\x86\sigtool.exe' KeyPath='no' />
+            <File Id='freshclam.conf' Name='freshclam.conf' DiskId='1' Source='..\Inst\Source\clamd\x86\freshclam.conf' KeyPath='no' />
+            <File Id='clamd.conf' Name='clamd.conf' DiskId='1' Source='..\Inst\Source\clamd-config\clamd.conf' KeyPath='no' />
+            <File Id='ReplaceString.js' Name='ReplaceString.js' DiskId='1' Source='..\SetupHelper\ReplaceString.js' KeyPath='no' />
+            <RegistryKey Id='ClamAVReg' Root='HKLM' Key='Software\ClamAV' Action='createAndRemoveOnUninstall'>
+              <RegistryValue Type='string' Name='ConfigDir' Value='[INSTALLDIR]'/>
+              <RegistryValue Type='string' Name='DataDir' Value='[DATABASEDIR]'/>
+            </RegistryKey>
+          </Component>
+          <Directory Id='msvccrt' Name='Microsoft.VC80.CRT'>
+            <Component Id='MsRuntime' Guid='88143DBD-3C3D-436f-8103-B18EAEC01231'>
+              <File Id='Microsoft.VC80.CRT.manifest' Name='Microsoft.VC80.CRT.manifest' DiskId='1' Source='..\Inst\Source\VC80\x86\Microsoft.VC80.CRT.manifest' KeyPath='yes' />
+              <File Id='msvcm80.dll' Name='msvcm80.dll' DiskId='1' Source='..\Inst\Source\VC80\x86\msvcm80.dll' KeyPath='no' />
+              <File Id='msvcp80.dll' Name='msvcp80.dll' DiskId='1' Source='..\Inst\Source\VC80\x86\msvcp80.dll' KeyPath='no' />
+              <File Id='msvcr80.dll' Name='msvcr80.dll' DiskId='1' Source='..\Inst\Source\VC80\x86\msvcr80.dll' KeyPath='no' />
+            </Component>
+          </Directory>
+          <Directory Id='DATABASEDIR' Name='db'>
+            <Component Id="ClamDB" Guid="CB99CE84-087F-4898-870B-2BDBB57912BD"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Location="either">
+              <CreateFolder/>
+              <RemoveFile Id='DataFiles' On='uninstall' Name='*' />
+            </Component>
+          </Directory>
+          <Directory Id='QDIR' Name='quarantine'>
+            <Component Id="ClamQuarantine" Guid="E5CB25A1-8E9D-46ae-B0CA-2B0CEF724800"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Location="either">
+              <CreateFolder>
+                <util:PermissionEx GenericAll="yes" User="[TRANSPORTUSER]"/>
+              </CreateFolder>
+              <RemoveFile Id='QuarantineFiles' On='uninstall' Name='*' />
+            </Component>
+          </Directory>
+          <Directory Id='DEBUGDIR' Name='debug'>
+            <Component Id="ClamDebug" Guid="45F1C0FC-C012-41b8-8B09-97DDF4DE3099"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Location="either">
+              <CreateFolder>
+                <util:PermissionEx GenericAll="yes" User="[TRANSPORTUSER]"/>
+              </CreateFolder>
+              <RemoveFile Id='DebugFiles' On='uninstall' Name='*' />
+            </Component>
+          </Directory>
+          <Directory Id='LOGDIR' Name='log'>
+            <Component Id="ClamLog" Guid="FCE44EB6-FA41-4310-85EE-0CF7DEEA1489"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Location="either">
+              <CreateFolder>
+                <util:PermissionEx GenericAll="yes" User="[TRANSPORTUSER]"/>
+              </CreateFolder>
+              <RemoveFile Id='LogFiles' On='uninstall' Name='*' />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="ProductFeature" Title="ClamAgent" Level="1">
+      <!-- TODO: Remove the comments around this ComponentRef element and the Component above in order to add resources to this installer. -->
+      <!-- <ComponentRef Id="ProductComponent" /> -->
+      <ComponentRef Id="SMTPSink"/>
+      <ComponentRef Id="ClamDaemon"/>
+      <ComponentRef Id="MsRuntime"/>
+      <ComponentRef Id="ClamDB"/>
+      <ComponentRef Id="ClamQuarantine"/>
+      <ComponentRef Id="ClamDebug"/>
+      <ComponentRef Id="ClamLog"/>
+      <!-- Note: The following ComponentGroupRef is required to pull in generated authoring from project references. -->
+      <ComponentGroupRef Id="Product.Generated" />
+    </Feature>
+    <CustomAction Id="SetCL_ClamDBUpdate" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]freshclam.exe&quot;" />
+    <CustomAction Id="ClamDBUpdate" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_FreshClamServiceInst" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]freshclam.exe&quot; --install"/>
+    <CustomAction Id="FreshClamServiceInst" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamDServiceInst" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]clamd.exe&quot; --install"/>
+    <CustomAction Id="ClamDServiceInst" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_FreshClamServiceUninst" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]freshclam.exe&quot; --uninstall"/>
+    <CustomAction Id="FreshClamServiceUninst" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamDServiceUninst" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]clamd.exe&quot; --uninstall"/>
+    <CustomAction Id="ClamDServiceUninst" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_FreshClamAuto" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; config freshclam start= auto"/>
+    <CustomAction Id="FreshClamAuto" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamDAuto" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; config clamd start= auto"/>
+    <CustomAction Id="ClamDAuto" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_FreshClamStart" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; start freshclam"/>
+    <CustomAction Id="FreshClamStart" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamDStart" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; start clamd"/>
+    <CustomAction Id="ClamDStart" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_FreshClamStop" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; stop freshclam"/>
+    <CustomAction Id="FreshClamStop" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamDStop" Property="QtExecCmdLine" Value="&quot;[SystemFolder]sc.exe&quot; stop clamd"/>
+    <CustomAction Id="ClamDStop" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_RegisterAssembly" Property="QtExecCmdLine" Value="&quot;[WindowsFolder]Microsoft.NET\Framework\v2.0.50727\regasm.exe&quot; &quot;[INSTALLDIR]ClamSink.dll&quot; /codebase"/>
+    <CustomAction Id="RegisterAssembly" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_UnRegisterAssembly" Property="QtExecCmdLine" Value="&quot;[WindowsFolder]Microsoft.NET\Framework\v2.0.50727\regasm.exe&quot; &quot;[INSTALLDIR]ClamSink.dll&quot; /unregister"/>
+    <CustomAction Id="UnRegisterAssembly" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_RegisterSink" Property="QtExecCmdLine" Value="&quot;[SystemFolder]cscript.exe&quot; &quot;[INSTALLDIR]smtpreg.vbs&quot; /add 1 OnArrival ClamSink ClamSink.ClamSink &quot;mail from=*&quot;"/>
+    <CustomAction Id="RegisterSink" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_UnRegisterSink" Property="QtExecCmdLine" Value="&quot;[SystemFolder]cscript.exe&quot; &quot;[INSTALLDIR]smtpreg.vbs&quot; /delete 1 OnArrival ClamSink"/>
+    <CustomAction Id="UnRegisterSink" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamSetDB" Property="QtExecCmdLine" Value="&quot;[SystemFolder]cscript.exe&quot; &quot;[INSTALLDIR]ReplaceString.js&quot; &quot;[INSTALLDIR]clamd.conf&quot; DATABASEDIR &quot;[DATABASEDIR]&quot;"/>
+    <CustomAction Id="ClamSetDB" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="SetCL_ClamSetLog" Property="QtExec64CmdLine" Value="&quot;[SystemFolder]cscript.exe&quot; &quot;[INSTALLDIR]ReplaceString.js&quot; &quot;[INSTALLDIR]clamd.conf&quot; LOGDIR &quot;[LOGDIR]&quot;"/>
+    <CustomAction Id="ClamSetLog" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="ignore"/>
+
+    <InstallExecuteSequence>
+      <Custom Action="SetCL_ClamSetDB" After="InstallFinalize">NOT Installed</Custom>
+      <Custom Action="ClamSetDB" After="SetCL_ClamSetDB">NOT Installed</Custom>
+
+      <Custom Action="SetCL_ClamSetLog" After="ClamSetDB">NOT Installed</Custom>
+      <Custom Action="ClamSetLog" After="SetCL_ClamSetLog">NOT Installed</Custom>
+
+      <Custom Action="SetCL_ClamDBUpdate" After="ClamSetLog">NOT Installed</Custom>
+      <Custom Action="ClamDBUpdate" After="SetCL_ClamDBUpdate">NOT Installed</Custom>
+
+      <Custom Action="SetCL_FreshClamServiceInst" After="ClamDBUpdate">NOT Installed</Custom>
+      <Custom Action="FreshClamServiceInst" After="SetCL_FreshClamServiceInst">NOT Installed</Custom>
+
+      <Custom Action="SetCL_FreshClamAuto" After="FreshClamServiceInst">NOT Installed</Custom>
+      <Custom Action="FreshClamAuto" After="SetCL_FreshClamAuto">NOT Installed</Custom>
+
+      <Custom Action="SetCL_FreshClamStart" After="FreshClamAuto">NOT Installed</Custom>
+      <Custom Action="FreshClamStart" After="SetCL_FreshClamStart">NOT Installed</Custom>
+
+      <Custom Action="SetCL_ClamDServiceInst" After="FreshClamStart">NOT Installed</Custom>
+      <Custom Action="ClamDServiceInst" After="SetCL_ClamDServiceInst">NOT Installed</Custom>
+
+      <Custom Action="SetCL_ClamDAuto" After="ClamDServiceInst">NOT Installed</Custom>
+      <Custom Action="ClamDAuto" After="SetCL_ClamDAuto">NOT Installed</Custom>
+
+      <Custom Action="SetCL_ClamDStart" After="ClamDAuto">NOT Installed</Custom>
+      <Custom Action="ClamDStart" After="SetCL_ClamDStart">NOT Installed</Custom>
+
+      <Custom Action="SetCL_RegisterAssembly" After="ClamDStart">NOT Installed</Custom>
+      <Custom Action="RegisterAssembly" After="SetCL_RegisterAssembly">NOT Installed</Custom>
+
+      <Custom Action="SetCL_RegisterSink" After="RegisterAssembly">NOT Installed</Custom>
+      <Custom Action="RegisterSink" After="SetCL_RegisterSink">NOT Installed</Custom>
+
+      <Custom Action="SetCL_UnRegisterSink" After="InstallInitialize">REMOVE="ALL"</Custom>
+      <Custom Action="UnRegisterSink" After="SetCL_UnRegisterSink">REMOVE="ALL"</Custom>
+
+      <Custom Action="SetCL_UnRegisterAssembly" After="InstallInitialize">REMOVE="ALL"</Custom>
+      <Custom Action="UnRegisterAssembly" After="SetCL_UnRegisterAssembly">REMOVE="ALL"</Custom>
+
+      <Custom Action="SetCL_FreshClamStop" After="UnRegisterAssembly">REMOVE="ALL"</Custom>
+      <Custom Action="FreshClamStop" After="SetCL_FreshClamStop">REMOVE="ALL"</Custom>
+
+      <Custom Action="SetCL_ClamDStop" After="FreshClamStop">REMOVE="ALL"</Custom>
+      <Custom Action="ClamDStop" After="SetCL_ClamDStop">REMOVE="ALL"</Custom>
+
+      <Custom Action="SetCL_ClamDServiceUninst" After="ClamDStop">REMOVE="ALL"</Custom>
+      <Custom Action="ClamDServiceUninst" After="SetCL_ClamDServiceUninst">REMOVE="ALL"</Custom>
+
+      <Custom Action="SetCL_FreshClamServiceUninst" After="ClamDServiceUninst">REMOVE="ALL"</Custom>
+      <Custom Action="FreshClamServiceUninst" After="SetCL_FreshClamServiceUninst">REMOVE="ALL"</Custom>
+    </InstallExecuteSequence>
+  </Product>
+</Wix>

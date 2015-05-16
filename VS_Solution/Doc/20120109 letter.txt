@@ -1,0 +1,7 @@
+Hi,
+
+Unfortunatelly I had no time to work with the ClamAgent in 2011. I’d like to release new version in the first half of this year. The registration is broken and none of my attempts to corret this on the actual DNN engine was successfull. I’ll change the CMS engine soon. You can expect a simplified download site in a week.
+
+Thank you for your patience
+Regards,
+Zoltán

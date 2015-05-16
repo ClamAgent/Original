@@ -1,0 +1,13 @@
+Prerequisites:
+	.NET 2.0
+	IIS SMTP
+
+OS Tipus megállapítása
+
+Fájlok másolása
+	Telepítési mappa
+FresClam hozzáadása a Scheduled Tasks-hoz (kérdés, hogy ez 2003/2008 esetén ugyanaz-e)
+
+ClamSink regisztrálása :
+	regasm?
+	smtpreg.vbs

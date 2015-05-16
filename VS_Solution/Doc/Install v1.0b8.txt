@@ -1,0 +1,149 @@
+ClamAgent
+
+The ClamAgent can be installed on the Exchange Edge or Hub Transport role. It is recomended to use the Edge Transport for the install location.
+
+The current version (v1.0 Build 8) can be installed via MSI installer. The current installer doesn't allow changes in the installation process. If you'd like to change something during the installation you have to use the manual installation process. For manual installation you must follow the steps bellow:
+
+1. Download the zip package contains the required files:
+	ClamAgent 2007 (for Exchange 2007)
+	Clamagent 2010 (for Exchange 2010)
+
+2. Create a directory for the agent itself (for example C:\Program Files\ClamAgent).
+
+3. Expand the zip package to the created directory.
+
+4. Create a directory for the clamav database.
+For example:
+C:\DATA\Clamd\db
+
+5. Create the a registry key for the clamd: HKLM\Software\ClamAV
+
+6. Create a registry value for clamd configuration
+Create a string value in the registry key created in step 5 named ConfigDir and a value should be the installation directory name (Created in step 2)
+
+7. Create a registry value for the signature database
+Create a string value in the registry key created in step 5 named DataDir and a value should be the database directory name (Created in step 4)
+
+8. Create three directories for the agent operation (logging, debugging, virus quarantine).
+For example:
+C:\DATA\ClamAgent\log
+C:\DATA\ClamAgent\debug
+C:\DATA\ClamAgent\quarantine
+
+9. Set the clamd.conf options:
+Locate the clamd.conf in the installation directory (created in step 2)
+Edit it and set DatabaseDirectory option to the clamd database (created in step 4)
+Set LogFile to the name of the clamd logfile (best to put it to the ClamAgent's log directory created in step 8)
+If the path above contains spaces don't forget to enclose it in quotation marks.
+
+10. Download manually the initial signature database:
+From the installation directory start the freshclam.exe and wait until it finish the downloading
+
+11. Install the ClamAV automatic update service:
+From the installation directory run the following command:
+freshclam.exe --install
+
+12. From the Administrative Tools start the Services mmc.
+
+13. Locate the ClamWin Free Antivirus Database Updater Service. Start it and set the startup type to automatic.
+
+14. Install the Clamd service:
+From the installation directory run the following command:
+clamd.exe --install
+
+15. In the Services mmc locate the ClamWin Free Antivirus Scanner Service. Start it and set the startup type to automatic.
+
+16. Determine the account who runs the Exchange Transport Service (by default it is the NETWORK SERVICE account)
+In the Services mmc check the Log on As column for the Microsoft Exchange Transport
+
+17. Grant full controll right to the service account determined in step 16 to the directories created in step 8.
+
+18. In the installation directory edit the ClamAgent.dll.config and include the directories created in the step 8 accordingly
+For example:
+    <add key="QuarantineFolder" value="C:\DATA\ClamAgent\quarantine" />
+    <add key="LogPath" value="C:\DATA\ClamAgent\log" />
+    <add key="DebugPath" value="C:\DATA\ClamAgent\debug" />
+
+19. Start the Exchange Management Shell
+
+20. Install the ClamAgent with the following two PowerShell commands:
+Install-TransportAgent -Name "ClamAgent" -TransportAgentFactory "ClamAgent.ClamAgentFactory" -AssemblyPath "<Installation Directory>\ClamAgent.dll"
+Enable-TransportAgent -Identity "ClamAgent"
+
+21. In the Services mmc restart the Microsoft Exchange Transport service
+
+
+
+
+ClamSink
+
+The ClamSink can be installed on the IIS SMTP Service.
+
+The current version (v1.0 Build 8) can be installed via MSI installer. The current installer doesn't allow changes in the installation process. If you'd like to change something during the installation you have to use the manual installation process. For manual installation you must follow the steps bellow:
+
+1. Download the zip package contains the required files:
+	ClamSink (for Exchange 2003 or IIS SMTP Service)
+
+2. Create a directory for the sink itself (for example C:\Program Files\ClamSink).
+
+3. Expand the zip package to the created directory.
+
+4. Create a directory for the clamav database.
+For example:
+C:\DATA\Clamd\db
+
+5. Create the a registry key for the clamd: HKLM\Software\ClamAV
+
+6. Create a registry value for clamd configuration
+Create a string value in the registry key created in step 5 named ConfigDir and a value should be the installation directory name (Created in step 2)
+
+7. Create a registry value for the signature database
+Create a string value in the registry key created in step 5 named DataDir and a value should be the database directory name (Created in step 4)
+
+8. Create three directories for the agent operation (logging, debugging, virus quarantine).
+For example:
+C:\DATA\ClamSink\log
+C:\DATA\ClamSink\debug
+C:\DATA\ClamSink\quarantine
+
+9. Set the clamd.conf options:
+Locate the clamd.conf in the installation directory (created in step 2)
+Edit it and set DatabaseDirectory option to the clamd database (created in step 4)
+Set LogFile to the name of the clamd logfile (best to put it to the ClamAgent's log directory created in step 8)
+If the path above contains spaces don't forget to enclose it in quotation marks.
+
+10. Download manually the initial signature database:
+From the installation directory start the freshclam.exe and wait until it finish the downloading
+
+11. Install the ClamAV automatic update service:
+From the installation directory run the following command:
+freshclam.exe --install
+
+12. From the Administrative Tools start the Services mmc.
+
+13. Locate the ClamWin Free Antivirus Database Updater Service. Start it and set the startup type to automatic.
+
+14. Install the Clamd service:
+From the installation directory run the following command:
+clamd.exe --install
+
+15. In the Services mmc locate the ClamWin Free Antivirus Scanner Service. Start it and set the startup type to automatic.
+
+16. Determine the account who runs the SMTP Servce (by default it is the LOCAL SYSTEM account)
+In the Services mmc check the Log on As column for the Simple Mailt Transport Service
+
+17. Grant full controll right to the service account determined in step 16 to the directories created in step 8.
+This step is optional. In the case if the service account is the LOCAL SYSTEM the step not required because it already has full access.
+
+18. In the installation directory edit the ClamSink.dll.config and include the directories created in the step 8 accordingly
+For example:
+    <add key="QuarantineFolder" value="C:\DATA\ClamSink\quarantine" />
+    <add key="LogPath" value="C:\DATA\ClamSink\log" />
+    <add key="DebugPath" value="C:\DATA\ClamSink\debug" />
+
+19. Start a command line
+
+20. Install the ClamSink with the following two commands:
+%SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\regasm "<Installation Directory>ClamSink.dll" /codebase
+cscript SmtpReg.vbs /add 1 OnArrival ClamSink ClamSink.ClamSink "mail from=*"
+

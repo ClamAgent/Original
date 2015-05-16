@@ -1,0 +1,14 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Test7.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Test7.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\ADODB.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\AdoStreamWrapper.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\CDO.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Microsoft.Exchange.Transport.EventInterop.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Microsoft.Exchange.Transport.EventWrappers.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Message Base.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\Microsoft.Exchange.Transport.EventWrappers.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\bin\Debug\AdoStreamWrapper.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\obj\Debug\Test7.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test7\obj\Debug\Test7.pdb

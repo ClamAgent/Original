@@ -1,0 +1,15 @@
+I've released the new version of the ClamAgent and ClamSink.
+This version uses the ClamAV native Windows port instead of the ClamWin executable.
+This changes two things.
+
+First: the ClamAV dlls are included into the installation package so
+the installation of the ClamWin is not required anymore.
+
+Second: with this release I've changed the version numbering scheme. The released version is
+v1.1.x.0.94.2.
+First number: Major version of the ClamAgent or ClamSink
+Second number: Minor version of the ClamAgent or ClamSink
+Third number: Build number of the ClamAgent or ClamSink
+Forth number: Major version of the ClamAV
+Fifth number: Minor version of the ClamAV
+Sixt number: Revision number of the ClamAV

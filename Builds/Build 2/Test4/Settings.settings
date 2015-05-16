@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClamAgent" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WorkingDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PrependSubject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ClamScanPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\program files\ClamWin\bin\clamscan.exe</Value>
+    </Setting>
+    <Setting Name="QuarantineFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\quarantine</Value>
+    </Setting>
+    <Setting Name="ClamWindDBPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Documents and Settings\All Users\.clamwin\db</Value>
+    </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogSplitDays" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DebugPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,11 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\Test6.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\Test6.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\ADODB.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\AdoStreamWrapper.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\CDO.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\Message Base.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\bin\Debug\AdoStreamWrapper.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\obj\Debug\Test6.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test6\obj\Debug\Test6.pdb

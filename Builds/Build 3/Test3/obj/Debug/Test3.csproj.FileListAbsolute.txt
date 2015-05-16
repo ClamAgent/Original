@@ -1,0 +1,5 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test3\bin\Debug\Test3.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test3\bin\Debug\Test3.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test3\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test3\obj\Debug\Test3.exe
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Test3\obj\Debug\Test3.pdb

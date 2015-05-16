@@ -1,0 +1,61 @@
+ClamAgent
+
+The ClamAgent can be installed on the Exchange Edge or Hub Transport role. It is recomended to use the Edge Transport for the install location.
+
+The current version (v1.0 Build 6) requires manul installation. You must follow the steps bellow:
+
+1. Create a directory for the agent itself (for example C:\Program Files\ClamAgent).
+
+2. Copy the ClamAgent.dll, MessageBase.dll and the ClamAgent.dll.config to the created directory.
+
+3. Create four directories for the agent operation (logging, debugging, virus quarantine, temporary files).
+For example:
+C:\DATA\ClamAgent\log
+C:\DATA\ClamAgent\debug
+C:\DATA\ClamAgent\quarantine
+C:\DATA\ClamAgent\temp
+
+4. Determine the account who runs the Exchange Transport Service (by default it is the NETWORK SERVICE account)
+In the Administrative Tools start the Services console and check the Log on As column of the Microsoft Exchange Transport
+
+5. Grant full controll right to the service account determined in step 4 to the directories created in step 3.
+
+6. Edit the ClamAgent.dll.config and include the directories created in the step 3 accordingly
+
+7. Start the Exchange Management Shell
+
+8. Install the ClamAgent with the following PowerShell commands:
+Install-TransportAgent -Name "ClamAgent" -TransportAgentFactory "ClamAgent.ClamAgentFactory" -AssemblyPath "C:\Program Files\ClamAgent\ClamAgent.dll"
+Enable-TransportAgent -Identity "ClamAgent"
+
+9. Restart the Microsoft Exchange Transport service
+
+ClamSink
+
+The ClamSink can be installed on the IIS SMTP Service. The current version (v1.0 Build 6) requires manul installation. You must follow the steps bellow:
+
+1. Create a directory for the agent itself (for example C:\Program Files\ClamSink).
+
+2. Expand the installation package to the created directory.
+
+3. Create four directories for the sink operation (logging, debugging, virus quarantine, temporary files).
+For example:
+C:\DATA\ClamSink\log
+C:\DATA\ClamSink\debug
+C:\DATA\ClamSink\quarantine
+C:\DATA\ClamSink\temp
+
+4. Determine the account who runs the SMTP Servce (by default it is the LOCAL SYSTEM account)
+In the Administrative Tools start the Services console and check the Log on As column of the Simple Mailt Transport Service
+
+5. Grant full controll right to the service account determined in step 4 to the directories created in step 3. This step is optional. In the case if the service account is the LOCAL SISTEM the step not required because it already has full access
+
+6. Edit the ClamSink.dll.config and include the directories created in the step 3 accordingly
+
+7. Start the command line
+
+8. Navigate to the installation folder
+
+9. Install the ClamSink with the following commands:
+%SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\regasm ClamSink.dll /codebase
+cscript SmtpReg.vbs /add 1 OnArrival ClamSink ClamSink.ClamSink "mail from=*"

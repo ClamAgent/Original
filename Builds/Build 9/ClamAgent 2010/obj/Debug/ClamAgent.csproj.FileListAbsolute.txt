@@ -1,0 +1,18 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\microsoft.exchange.data.common.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\microsoft.exchange.data.transport.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ClamAgent.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.dll.config
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\Message Base.pdb
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.dll.config
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.dll
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\ClamAgent.pdb
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\Message Base.dll
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Debug\Message Base.pdb
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ResolveAssemblyReference.cache
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ClamAgent.dll
+\\balu\users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Debug\ClamAgent.pdb

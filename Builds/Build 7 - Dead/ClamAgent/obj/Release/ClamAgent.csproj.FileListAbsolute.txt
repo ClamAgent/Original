@@ -1,0 +1,10 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll.config
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.common.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.transport.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.pdb

@@ -1,0 +1,15 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll.config
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ADODB.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\CDO.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventInterop.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.pdb

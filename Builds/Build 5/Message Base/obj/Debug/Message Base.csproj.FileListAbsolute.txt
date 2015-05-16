@@ -1,0 +1,5 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Message Base\bin\Debug\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Message Base\bin\Debug\Message Base.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Message Base\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Message Base\obj\Debug\Message Base.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\Message Base\obj\Debug\Message Base.pdb

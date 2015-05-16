@@ -1,0 +1,24 @@
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.dll.config
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Message Base.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Message Base.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ResolveAssemblyReference.cache
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ClamAgent.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ClamAgent.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Common.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Transport.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Transport.xml
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Common.xml
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.dll.config
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\ClamAgent.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Message Base.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Common.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Transport.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Message Base.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Common.xml
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\bin\Release\Microsoft.Exchange.Data.Transport.xml
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ResolveAssemblyReference.cache
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ClamAgent.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent 2010\obj\Release\ClamAgent.pdb

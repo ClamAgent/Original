@@ -1,0 +1,1 @@
+%SystemRoot%\system32\windowspowershell\v1.0\powershell.exe -PSConsoleFile "%ProgramFiles%\Microsoft\Exchange Server\bin\exshell.psc1" -command "végrehajtandó parancs"

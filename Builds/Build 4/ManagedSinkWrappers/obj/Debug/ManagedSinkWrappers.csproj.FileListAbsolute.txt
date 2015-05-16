@@ -1,0 +1,6 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\bin\Debug\Microsoft.Exchange.Transport.EventWrappers.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\bin\Debug\Microsoft.Exchange.Transport.EventWrappers.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\bin\Debug\Microsoft.Exchange.Transport.EventInterop.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\obj\Debug\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\obj\Debug\Microsoft.Exchange.Transport.EventWrappers.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ManagedSinkWrappers\obj\Debug\Microsoft.Exchange.Transport.EventWrappers.pdb

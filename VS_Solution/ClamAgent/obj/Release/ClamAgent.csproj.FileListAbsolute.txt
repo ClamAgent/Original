@@ -1,0 +1,26 @@
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll.config
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.pdb
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.common.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.transport.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ResolveAssemblyReference.cache
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.dll
+\\File1\DFS\USERS\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll.config
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ResolveAssemblyReference.cache
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll.config
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\ClamAgent.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.common.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\microsoft.exchange.data.transport.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\bin\Release\Message Base.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\obj\Release\ResolveAssemblyReference.cache
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamAgent\obj\Release\ClamAgent.pdb

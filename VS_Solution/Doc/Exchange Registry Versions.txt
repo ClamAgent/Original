@@ -1,0 +1,39 @@
+
+IIS SMTP
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\Oc Manager\Subcomponents
+
+iis_smtp REG_SZ = 1
+
+
+Exchange 2003
+
+HKLM\SOFTWARE\Microsoft\Exchange\Setup
+
+Services Version DWORD 65
+ServicePackBuild DWORD 7638
+ServicePackNumber DWORD 2
+
+Exchange 2007 (SP2)
+
+
+HKLM\SOFTWARE\Microsoft\Exchange\v8.0\HubTransportRole
+
+ConfiguredVersion REG_SZ 8.2.176.2
+UnpackedVersion REG_SZ 8.2.176.2
+
+HKLM\SOFTWARE\Microsoft\Exchange\v8.0\EdgeTransportRole
+
+ConfiguredVersion REG_SZ 8.2.176.2
+UnpackedVersion REG_SZ 8.2.176.2
+
+Exchange 2007 (SP3)
+
+8.3.83.6
+
+Exchange 2010
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\HubTransportRole
+
+ConfiguredVerson REG_SZ 14.0.639.21
+UnpackedVersion REG_SZ 14.0.639.21

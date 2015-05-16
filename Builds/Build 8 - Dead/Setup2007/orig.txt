@@ -1,0 +1,17 @@
+    <!-- CustomAction Id="ClamDBUpdate" FileKey="freshclam.exe" ExeCommand="" Return="ignore" -->
+    <!-- CustomAction Id="FreshClamServiceInst" FileKey="freshclam.exe" ExeCommand="--install" Return="ignore" -->
+    <!-- CustomAction Id="ClamDServiceInst" FileKey="clamd.exe" ExeCommand="--install" Return="ignore" -->
+    <!-- CustomAction Id="FreshClamServiceUninst" FileKey="freshclam.exe" ExeCommand="--uninstall" Return="ignore" -->
+    <!-- CustomAction Id="ClamDServiceUninst" FileKey="clamd.exe" ExeCommand="--uninstall" Return="ignore" -->
+    <!-- CustomAction Id="FreshClamAuto" Property="ServiceControll" ExeCommand="config freshclam start= auto" Return="ignore" -->
+    <!-- CustomAction Id="ClamDAuto" Property="ServiceControll" ExeCommand="config clamd start= auto" Return="ignore" -->
+    <!-- CustomAction Id="FreshClamStart" Property="ServiceControll" ExeCommand="start freshclam" Return="ignore" -->
+    <!-- CustomAction Id="ClamDStart" Property="ServiceControll" ExeCommand="start clamd" Return="ignore" -->
+    <!-- CustomAction Id="TransportStart" Property="NetExe" ExeCommand="start MSExchangeTransport" Return="ignore" -->
+    <!-- CustomAction Id="TransportStop" Property="NetExe" ExeCommand="stop MSExchangeTransport" Return="ignore" -->
+    <!-- CustomAction Id="TransportStart_Uninstall" Property="NetExe" ExeCommand="start MSExchangeTransport" Return="ignore" -->
+    <!-- CustomAction Id="TransportStop_Uninstall" Property="NetExe" ExeCommand="stop MSExchangeTransport" Return="ignore" -->
+    <!-- CustomAction Id="InstallAgent" Property="PowerShell" ExeCommand="-PSConsoleFile &quot;[EXCHANGEPATH]Bin\ExShell.psc1&quot; -Command &quot;. '[INSTALLDIR]Install-ClamAgent.ps1' '[INSTALLDIR]ClamAgent.dll'&quot;" Return="ignore"-->
+    <!-- CustomAction Id="UninstallAgent" Property="PowerShell" ExeCommand="-PSConsoleFile &quot;[EXCHANGEPATH]Bin\ExShell.psc1&quot; -Command &quot;. '[INSTALLDIR]Uninstall-ClamAgent.ps1'&quot;" Return="ignore"-->
+    <!-- CustomAction Id="ClamSetDB" Property="CScript" ExeCommand="&quot;[INSTALLDIR]ReplaceString.js&quot; &quot;[INSTALLDIR]clamd.conf&quot; DATABASEDIR &quot;[DATABASEDIR]&quot;" Return="ignore" -->
+    <!-- CustomAction Id="ClamSetLog" Property="CScript" ExeCommand="&quot;[INSTALLDIR]ReplaceString.js&quot; &quot;[INSTALLDIR]clamd.conf&quot; LOGDIR &quot;[LOGDIR]&quot;" Return="ignore" -->

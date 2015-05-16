@@ -1,0 +1,30 @@
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ResolveAssemblyReference.cache
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll.config
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\ADODB.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\CDO.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventInterop.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.pdb
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.dll
+\\balu\Users\zoli\My Documents\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll.config
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\ClamSink.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\ADODB.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\CDO.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventInterop.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\AdoStreamWrapper.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\Microsoft.Exchange.Transport.EventWrappers.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\bin\Release\Message Base.pdb
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\obj\Release\ResolveAssemblyReference.cache
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.dll
+C:\DATA\Dropbox\Development\Projects\ClamAgent\ClamSink\obj\Release\ClamSink.pdb

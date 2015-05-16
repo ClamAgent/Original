@@ -1,0 +1,5 @@
+ClamAgent ToDo:
+
+- Upgrade a telepítõben
+- 0.96.1 clamD
+- 32-bites E2k7

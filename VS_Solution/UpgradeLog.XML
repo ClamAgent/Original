@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ClamAgent">
+</Property><Property Name="Solution File" Value="C:\DATA\My Dropbox\Development\Projects\ClamAgent\ClamAgent.sln">
+</Property><Property Name="Date" Value="2011. május 13.">
+</Property><Property Name="Time" Value="20:52">
+</Property></Properties><Event ErrorLevel="0" Project="ClamAgent" Source="ClamAgent\ClamAgent.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ClamAgent" Source="ClamAgent\ClamAgent.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ClamSink" Source="ClamSink\ClamSink.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ClamSink" Source="ClamSink\ClamSink.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ManagedSinkWrappers" Source="ManagedSinkWrappers\ManagedSinkWrappers.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ManagedSinkWrappers" Source="ManagedSinkWrappers\ManagedSinkWrappers.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Message Base" Source="Message Base\Message Base.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Message Base" Source="Message Base\Message Base.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="AdoStreamWrapper" Source="AdoStreamWrapper\AdoStreamWrapper.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="AdoStreamWrapper" Source="AdoStreamWrapper\AdoStreamWrapper.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Test5" Source="Test5\Test5.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Test5" Source="Test5\Test5.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Test6" Source="Test6\Test6.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Test6" Source="Test6\Test6.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Test7" Source="Test7\Test7.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Test7" Source="Test7\Test7.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Test8" Source="Test8\Test8.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Test8" Source="Test8\Test8.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Setup2007" Source="Setup2007\Setup2007.wixproj" Description="The path to the WiX targets file has been updated.">
+</Event><Event ErrorLevel="0" Project="SetupHelper" Source="SetupHelper\SetupHelper.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="SetupHelper" Source="SetupHelper\SetupHelper.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Test9" Source="Test9\Test9.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Test9" Source="Test9\Test9.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ClamAgent 2010" Source="ClamAgent 2010\ClamAgent 2010.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ClamAgent 2010" Source="ClamAgent 2010\ClamAgent 2010.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Setup2003" Source="Setup2003\Setup2003.wixproj" Description="The path to the WiX targets file has been updated.">
+</Event><Event ErrorLevel="0" Project="Setup2010" Source="Setup2010\Setup2010.wixproj" Description="The path to the WiX targets file has been updated.">
+</Event><Event ErrorLevel="0" Project="" Source="ClamAgent.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="ClamAgent.sln" Description="No Conversion Required">
+</Event></UpgradeLog>

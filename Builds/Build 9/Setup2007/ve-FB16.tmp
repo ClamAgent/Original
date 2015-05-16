@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util='http://schemas.microsoft.com/wix/UtilExtension'>
+	<Product Id="99504467-fdf5-4ce9-b2dc-5521349911e4" Name="ClamAgent 2007" Language="1033" Version="1.0.0.0" Manufacturer="SUF" UpgradeCode="422fc131-9ccb-4673-ab77-27b48409d7c8">
+		<Package InstallerVersion="200" Compressed="yes" />
+
+		<Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+    <Property Id="TRANSPORTUSER">
+      <RegistrySearch Id='TransportServiceUserName' Type='raw'
+          Root='HKLM' Key='SYSTEM\CurrentControlSet\Services\MSExchangeTransport' Name='ObjectName' />
+    </Property>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLDIR" Name="ClamAgent">
+          <Component Id='TransportAgent' Guid='2948121F-2A62-469f-A101-E5BE4A318965'>
+            <File Id='ClamAgent.dll' Name='ClamAgent.dll' DiskId='1' Source='..\ClamAgent\bin\Release\ClamAgent.dll' KeyPath='yes' />
+            <File Id='Message_Base.dll' Name='Message Base.dll' DiskId='1' Source='..\ClamAgent\bin\Release\Message Base.dll' KeyPath='no' />
+            <File Id='ClamAgent.dll.config' Name='ClamAgent.dll.config' DiskId='1' Source='..\ClamAgent\bin\Release\ClamAgent.dll.config' KeyPath='no' />
+            <util:XmlFile Id='SettingsQuarantine' File='[INSTALLDIR]ClamAgent.dll.config' Action='setValue' Name='value' Value='[QDIR]' ElementPath='//configuration/appSettings/add[\[]@key="QuarantineFolder"[\]]' Sequence='1' />
+            <util:XmlFile Id='SettingsLog' File='[INSTALLDIR]ClamAgent.dll.config' Action='setValue' Name='value' Value='[LOGDIR]' ElementPath='//configuration/appSettings/add[\[]@key="LogPath"[\]]' Sequence='2' />
+            <util:XmlFile Id='SettingsDebug' File='[INSTALLDIR]ClamAgent.dll.config' Action='setValue' Name='value' Value='[DEBUGDIR]' ElementPath='//configuration/appSettings/add[\[]@key="DebugPath"[\]]' Sequence='3' />
+          </Component>
+          <Component Id='ClamDaemon' Guid='BF2145EF-C1F8-485c-B77E-C54C373EEAD4'>
+            <File Id='clamd.exe' Name='clamd.exe' DiskId='1' Source='..\Inst\Source\clamd\x64\clamd.exe' KeyPath='yes' />
+            <File Id='clamdscan.exe' Name='clamdscan.exe' DiskId='1' Source='..\Inst\Source\clamd\x64\clamdscan.exe' KeyPath='no' />
+            <File Id='freshclam.exe' Name='freshclam.exe' DiskId='1' Source='..\Inst\Source\clamd\x64\freshclam.exe' KeyPath='no' />
+            <File Id='libclamav.dll' Name='libclamav.dll' DiskId='1' Source='..\Inst\Source\clamd\x64\libclamav.dll' KeyPath='no' />
+            <File Id='libclamav_llvm.dll' Name='libclamav_llvm.dll' DiskId='1' Source='..\Inst\Source\clamd\x64\libclamav_llvm.dll' KeyPath='no' />
+            <File Id='libclamunrar.dll' Name='libclamunrar.dll' DiskId='1' Source='..\Inst\Source\clamd\x64\libclamunrar.dll' KeyPath='no' />
+            <File Id='libclamunrar_iface.dll' Name='libclamunrar_iface.dll' DiskId='1' Source='..\Inst\Source\clamd\x64\libclamunrar_iface.dll' KeyPath='no' />
+            <File Id='sigtool.exe' Name='sigtool.exe' DiskId='1' Source='..\Inst\Source\clamd\x64\sigtool.exe' KeyPath='no' />
+            <File Id='freshclam.conf' Name='freshclam.conf' DiskId='1' Source='..\Inst\Source\clamd\x64\freshclam.conf' KeyPath='no' />
+            <RegistryKey Id='ClamAVReg' Root='HKLM' Key='Software\ClamAV' Action='createAndRemoveOnUninstall'>
+              <RegistryValue Type='string' Name='ConfigDir' Value='[INSTALLDIR]'/>
+              <RegistryValue Type='string' Name='DataDir' Value='[DATABASEDIR]'/>
+            </RegistryKey>
+          </Component>
+          <Directory Id='msvccrt' Name='Microsoft.VC80.CRT'>
+            <Component Id='MsRuntime' Guid='DA1F5BEA-B0A5-4250-B5E1-551C82B4DB36'>
+              <File Id='Microsoft.VC80.CRT.manifest' Name='Microsoft.VC80.CRT.manifest' DiskId='1' Source='..\Inst\Source\VC80\x64\Microsoft.VC80.CRT.manifest' KeyPath='yes' />
+              <File Id='msvcm80.dll' Name='msvcm80.dll' DiskId='1' Source='..\Inst\Source\VC80\x64\msvcm80.dll' KeyPath='no' />
+              <File Id='msvcp80.dll' Name='msvcp80.dll' DiskId='1' Source='..\Inst\Source\VC80\x64\msvcp80.dll' KeyPath='no' />
+              <File Id='msvcr80.dll' Name='msvcr80.dll' DiskId='1' Source='..\Inst\Source\VC80\x64\msvcr80.dll' KeyPath='no' />
+            </Component>
+          </Directory>
+          <Directory Id='DATABASEDIR' Name='db'>
+            <Component Id="ClamDB" Guid="2F43A667-33B8-4392-B203-BF9656A1F83E"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no"
+              Win64="no" Location="either">
+              <CreateFolder/>
+            </Component>
+          </Directory>
+          <Directory Id='QDIR' Name='quarantine'>
+            <Component Id="ClamQuarantine" Guid="FD3B42EC-849B-4CA9-ADF7-F3D39A71ECE8"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no"
+              Win64="no" Location="either">
+              <CreateFolder/>
+            </Component>
+          </Directory>
+          <Directory Id='DEBUGDIR' Name='debug'>
+            <Component Id="ClamDebug" Guid="F418927E-6F2E-4276-B2E5-C1C109AE1083"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no"
+              Win64="no" Location="either">
+              <CreateFolder/>
+            </Component>
+          </Directory>
+          <Directory Id='LOGDIR' Name='log'>
+            <Component Id="ClamLog" Guid="BB56720F-BC8A-44f2-BA57-E1D9B037236B"
+              SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no"
+              Win64="no" Location="either">
+              <CreateFolder/>
+            </Component>
+          </Directory>
+        </Directory>
+			</Directory>
+		</Directory>
+
+		<Feature Id="ProductFeature" Title="ClamAgent" Level="1">
+			<!-- TODO: Remove the comments around this ComponentRef element and the Component above in order to add resources to this installer. -->
+			<!-- <ComponentRef Id="ProductComponent" /> -->
+      <ComponentRef Id="TransportAgent"/>
+      <ComponentRef Id="ClamDaemon"/>
+      <ComponentRef Id="MsRuntime"/>
+      <ComponentRef Id="ClamDB"/>
+      <ComponentRef Id="ClamQuarantine"/>
+      <ComponentRef Id="ClamDebug"/>
+      <ComponentRef Id="ClamLog"/>
+      <!-- Note: The following ComponentGroupRef is required to pull in generated authoring from project references. -->
+			<ComponentGroupRef Id="Product.Generated" />
+		</Feature>
+	</Product>
+</Wix>
